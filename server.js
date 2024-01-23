@@ -17,7 +17,7 @@ app.get('/download-file/:fileId', async (req, res) => {
                 Authorization: 'hsduify98asfhaiosfy89asnfiNIS',
             },
             maxRedirects: 20,
-            responseType: 'arraybuffer', // to handle binary data
+            responseType: 'stream', // to handle binary data
         });
 
         res.setHeader('Content-Type', response.headers['content-type']);
